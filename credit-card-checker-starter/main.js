@@ -44,8 +44,12 @@ const batch = [
   anothers3,    
 ];
 
-// Add your functions below:
-//  --- I made this project without stackoverflow or either another help --- //
+/**
+ * This function is responsible for iterating the array, 
+ * first the check digits and then the other digits doubling each one, 
+ * to finish, the function it adds all the values 
+ * and divides by ten, returning the rest 
+ */
 function validateCred(array) {
   let firstHalf = 0;
   let secondHalf = 0;
@@ -60,6 +64,10 @@ function validateCred(array) {
   return remainder === 0;
 }
 
+/**
+ * this function is responsible for getting the nested array
+ * and separating the invalid cards by creating a new array through they.
+ */
 function findInvelidCards(nestedArray) {
   let invalidCards = nestedArray.filter(subArray => {
     if (!validateCred(subArray)) return subArray;
@@ -92,9 +100,9 @@ function idInvalidCardCompanies(nestedArray) {
       }
     }
   }
-  // I used Set and Spread operator for remove doubled data on array
   companies = [...new Set(companies)];
   return companies
 }
 
 findInvelidCards(batch);
+//  --- I made this project without stackoverflow or either another help --- //
