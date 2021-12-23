@@ -14,19 +14,22 @@ const mockUpStrand = () => {
 };
 
 const pAequorFactory = (specimenNum, dna) => {
+  console.log(dna)
   return {
     specimenNum,
     dna,
     mutate() {
-      // Need aply recoursive tecnique 
-      let random = returnRandBase();   
-      if (dnaType === order) {
-        return returnRandBase()
-      } else {
-        order = dnaType
-        return dnaType
-      }
+      let idx = Math.floor(Math.random() * this.dna.length)
+      let newBase = returnRandBase()
+      
+      if (newBase !== this.dna[idx]) {
+        this.dna.splice(idx, 1, newBase)
+      } 
+      return this.dna
     },
+    compareDna(pAequor) {
+
+    }
   };
 };
 
