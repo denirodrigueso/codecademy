@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+    font-size: 22px;
+    opacity: 0.5;
+    color: seashell;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.flexbox>* {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    height: 69px;
+    margin: 0 10px;
+}
+
+ul li {
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+#logo {
+    height: 50px;
+}
+
+.flexbox div[id*='mission'] {
+    flex-grow: 2;
+}
+
+.flexbox nav {
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+#our-mission {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    background: url("/img/img-mission-background.jpg") no-repeat center top;
+    align-items: center;
+}
+
+#our-mission>* {
+    text-align: center;
+}
+
+#our-mission section {
+    flex-basis: 1200px;
+    height: 100px;
+    background-color: black;
+}
+
+section h2 {
+    margin: 10px 0 20px 0;
+    font-size: 30px;
+}
+
+#tea-month-ttl {
+    font-size: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+#tea-month-description {
+    margin: 10px 0 40px 0;
+    text-align: center;
+}
+
+img[id*='img-'] {
+    width: 300px;
+    height: 200px;
+}
+
+.tea-month-div {
+    margin: 15px;
+    width: 300px;
+    height: 200px;
+}
+
+.tea-month-sec {
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#locations {
+    background: url(/img/img-locations-background.jpg) no-repeat center top;
+    height: 500px;
+}
+
+#locations-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#locations h2 {
+    text-align: center;
+    margin: 50px auto 15px auto;
+    padding-top: 50px;
+}
+
+.locations-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    height: 300px;
+    width: 300px;
+    background-color: black;
+}
+
+.locations-box>* {
+    margin-top: 40px;
+}
+
+
+footer {
+    height: 200px;
+}
+
+footer>* {
+    text-align: center;
+}
+
+footer h2 {
+    margin-top: 20px;
+}
+
+footer h4, h5 {
+    margin-top: 35px;
+}
+
+footer p {
+    text-align: left;
+    margin: 35px 0 0 20px;
+    padding-bottom: 20px;;
+}
+
